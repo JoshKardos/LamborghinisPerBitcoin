@@ -1,0 +1,6 @@
+framework module Pods_BitcoinFancyCars {
+  umbrella header "Pods-BitcoinFancyCars-umbrella.h"
+
+  export *
+  module * { export * }
+}

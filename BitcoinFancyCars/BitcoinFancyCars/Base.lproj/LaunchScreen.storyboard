@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="ipad10_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVx-2W-lac" userLabel="LogoView">
+                                <rect key="frame" x="229.5" y="492" width="375" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Lamborghini-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="8VZ-hl-pcd">
+                                        <rect key="frame" x="200" y="0.0" width="142" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="142" id="8qK-ym-ZQo"/>
+                                            <constraint firstAttribute="height" constant="128" id="eq9-Ed-JWR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bitcoin" translatesAutoresizingMaskIntoConstraints="NO" id="Gk3-HB-dUS">
+                                        <rect key="frame" x="58" y="0.0" width="142" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="142" id="GtH-Of-V6f"/>
+                                            <constraint firstAttribute="height" constant="128" id="HC0-Dl-QCE"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="IgH-oy-gDc"/>
+                                    <constraint firstAttribute="width" constant="375" id="peJ-R0-vEj"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLt-dT-Zw4" userLabel="TopView">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2r-Pt-nJV" userLabel="BottomView">
+                                <rect key="frame" x="0.0" y="620" width="834" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="J2r-Pt-nJV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2dZ-0k-dY7"/>
+                            <constraint firstItem="aVx-2W-lac" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="4fb-nJ-bSQ"/>
+                            <constraint firstItem="aVx-2W-lac" firstAttribute="top" secondItem="QLt-dT-Zw4" secondAttribute="bottom" id="F1K-iH-64h"/>
+                            <constraint firstItem="aVx-2W-lac" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="FvL-fM-q3l"/>
+                            <constraint firstItem="J2r-Pt-nJV" firstAttribute="top" secondItem="aVx-2W-lac" secondAttribute="bottom" id="Q63-Ri-10Q"/>
+                            <constraint firstItem="QLt-dT-Zw4" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="SfN-zA-MjP"/>
+                            <constraint firstItem="J2r-Pt-nJV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UU2-nb-uRN"/>
+                            <constraint firstItem="QLt-dT-Zw4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tCe-HL-ken"/>
+                            <constraint firstItem="QLt-dT-Zw4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tzu-Fr-UXW"/>
+                            <constraint firstItem="J2r-Pt-nJV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yr2-g8-3mK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50.399999999999999" y="373.76311844077964"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Lamborghini-Logo" width="1100" height="1100"/>
+        <image name="bitcoin" width="335" height="335"/>
+    </resources>
+</document>
