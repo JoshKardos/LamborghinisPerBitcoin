@@ -11,11 +11,12 @@
 		B3ADB49F21434AEB00F455AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADB49E21434AEB00F455AA /* AppDelegate.swift */; };
 		B3ADB4A121434AEB00F455AA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADB4A021434AEB00F455AA /* MainViewController.swift */; };
 		B3ADB4A421434AEB00F455AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3ADB4A221434AEB00F455AA /* Main.storyboard */; };
-		B3ADB4A621434AEB00F455AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3ADB4A521434AEB00F455AA /* Assets.xcassets */; };
 		B3ADB4A921434AEB00F455AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3ADB4A721434AEB00F455AA /* LaunchScreen.storyboard */; };
 		B3ADB4B6214353C800F455AA /* Icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = B3ADB4B5214353C700F455AA /* Icon-1024.png */; };
 		B3ADB4BB2144F2BE00F455AA /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADB4BA2144F2BE00F455AA /* AddViewController.swift */; };
-		B3ADB4BD2145D56400F455AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3ADB4BC2145D56400F455AA /* GoogleService-Info.plist */; };
+		B3ADB4C32145EED200F455AA /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADB4C22145EED200F455AA /* Car.swift */; };
+		B3ADB4CB2145F67700F455AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3ADB4CA2145F67600F455AA /* GoogleService-Info.plist */; };
+		B3ADB4CE214733CF00F455AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3ADB4A521434AEB00F455AA /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +31,9 @@
 		B3ADB4B5214353C700F455AA /* Icon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-1024.png"; sourceTree = "<group>"; };
 		B3ADB4B9214354A100F455AA /* BitcoinFancyCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitcoinFancyCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3ADB4BA2144F2BE00F455AA /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
-		B3ADB4BC2145D56400F455AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B3ADB4BE2145E9E500F455AA /* BitcoinFancyCars.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = BitcoinFancyCars.app; path = "../../../Library/Developer/Xcode/DerivedData/BitcoinFancyCars-ftbovwkqzkkykrgwwsikjjkjgsoo/Build/Products/Debug-iphonesimulator/BitcoinFancyCars.app"; sourceTree = "<group>"; };
+		B3ADB4C22145EED200F455AA /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		B3ADB4CA2145F67600F455AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C69FA552A61851D42C110C16 /* Pods-BitcoinFancyCars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinFancyCars.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinFancyCars/Pods-BitcoinFancyCars.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +61,7 @@
 		AC568C415B49D263BA29E648 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3ADB4BE2145E9E500F455AA /* BitcoinFancyCars.app */,
 				4E49D1FA686E5A480BB53E2A /* Pods_BitcoinFancyCars.framework */,
 			);
 			name = Frameworks;
@@ -78,14 +82,12 @@
 		B3ADB49D21434AEB00F455AA /* BitcoinFancyCars */ = {
 			isa = PBXGroup;
 			children = (
-				B3ADB49E21434AEB00F455AA /* AppDelegate.swift */,
-				B3ADB4A021434AEB00F455AA /* MainViewController.swift */,
-				B3ADB4BA2144F2BE00F455AA /* AddViewController.swift */,
-				B3ADB4A221434AEB00F455AA /* Main.storyboard */,
+				B3ADB4C12145EEBF00F455AA /* Models */,
+				B3ADB4C02145EEAA00F455AA /* Controllers */,
+				B3ADB4BF2145EE9500F455AA /* Views */,
 				B3ADB4A521434AEB00F455AA /* Assets.xcassets */,
-				B3ADB4A721434AEB00F455AA /* LaunchScreen.storyboard */,
 				B3ADB4AA21434AEB00F455AA /* Info.plist */,
-				B3ADB4BC2145D56400F455AA /* GoogleService-Info.plist */,
+				B3ADB4CA2145F67600F455AA /* GoogleService-Info.plist */,
 			);
 			path = BitcoinFancyCars;
 			sourceTree = "<group>";
@@ -95,6 +97,33 @@
 			children = (
 			);
 			path = Products;
+			sourceTree = "<group>";
+		};
+		B3ADB4BF2145EE9500F455AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3ADB4A721434AEB00F455AA /* LaunchScreen.storyboard */,
+				B3ADB4A221434AEB00F455AA /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B3ADB4C02145EEAA00F455AA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B3ADB4BA2144F2BE00F455AA /* AddViewController.swift */,
+				B3ADB49E21434AEB00F455AA /* AppDelegate.swift */,
+				B3ADB4A021434AEB00F455AA /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B3ADB4C12145EEBF00F455AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B3ADB4C22145EED200F455AA /* Car.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,11 +187,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3ADB4BD2145D56400F455AA /* GoogleService-Info.plist in Resources */,
 				B3ADB4A921434AEB00F455AA /* LaunchScreen.storyboard in Resources */,
 				B3ADB4B6214353C800F455AA /* Icon-1024.png in Resources */,
-				B3ADB4A621434AEB00F455AA /* Assets.xcassets in Resources */,
+				B3ADB4CB2145F67700F455AA /* GoogleService-Info.plist in Resources */,
 				B3ADB4A421434AEB00F455AA /* Main.storyboard in Resources */,
+				B3ADB4CE214733CF00F455AA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +253,7 @@
 			files = (
 				B3ADB4A121434AEB00F455AA /* MainViewController.swift in Sources */,
 				B3ADB49F21434AEB00F455AA /* AppDelegate.swift in Sources */,
+				B3ADB4C32145EED200F455AA /* Car.swift in Sources */,
 				B3ADB4BB2144F2BE00F455AA /* AddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,7 +399,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.JoshKardos.BitcoinFancyCars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -385,7 +415,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.JoshKardos.BitcoinFancyCars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

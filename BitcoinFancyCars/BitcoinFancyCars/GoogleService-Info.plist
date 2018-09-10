@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>183039067345-efk3u4ga30qb6m9r9h6fbtv6n2koneg9.apps.googleusercontent.com</string>
+	<string>147332476560-18mjtrpun1rahv4n569i7v1hk5gq11rg.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.183039067345-efk3u4ga30qb6m9r9h6fbtv6n2koneg9</string>
+	<string>com.googleusercontent.apps.147332476560-18mjtrpun1rahv4n569i7v1hk5gq11rg</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCdBE69t_nrdBdr1GxoZhlUPzAU4Uj5Gd4</string>
+	<string>AIzaSyAzzlDZnZRQOE2IRufVTOrIbIYJ8Z4pX_M</string>
 	<key>GCM_SENDER_ID</key>
-	<string>183039067345</string>
+	<string>147332476560</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.JoshKardos.BitcoinFancyCars</string>
 	<key>PROJECT_ID</key>
-	<string>flash-chat-b673c</string>
+	<string>bitcoinfancycars</string>
 	<key>STORAGE_BUCKET</key>
-	<string>flash-chat-b673c.appspot.com</string>
+	<string>bitcoinfancycars.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:183039067345:ios:ad3beb7ec61ba98c</string>
+	<string>1:147332476560:ios:ad3beb7ec61ba98c</string>
 	<key>DATABASE_URL</key>
-	<string>https://flash-chat-b673c.firebaseio.com</string>
+	<string>https://bitcoinfancycars.firebaseio.com</string>
 </dict>
 </plist>

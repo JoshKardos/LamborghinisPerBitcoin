@@ -9,14 +9,16 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Firebase
 
 class MainViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 	
 	let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD"//url format for api
 	var bitcoinPrice = 0.0
-	var lamboModels = ["Huracan" ,"Aventador", "Urus"]
-	var lamboPrices = [203295, 402995, 200000]
-	var finalURL = ""
+	static var lamboModelsDB = [Car(model: "Gallardo", price: 400000), Car(model:"Van", price:900)]
+	//static var lamboModelsDB = returnCars()
+	
+	var carIndexToDelete = 0
 	
 	//Pre-setup IBOutlets
 	
@@ -24,49 +26,81 @@ class MainViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 	@IBOutlet weak var bitcoinPriceLabel: UILabel!
 	@IBOutlet weak var currencyPicker: UIPickerView!
 	
+	
+	/*static func returnCars() -> [Car]{
+		var getCars = [Car]()
+		let carDB = Database.database().reference().child("Cars")
+		carDB.observe(.childAdded) { (snapshot) in
+			let snapshotValue = snapshot.value as! Dictionary<String, String>
+			
+			let model = snapshotValue["Model"]!
+			let price = snapshotValue["Price"]!
+			
+			print(model, price)
+			
+			let car = Car(model: model, price: Double(price)!)
+			print("Car Model: \(car.model) Price : \(car.price)")
+			getCars.append(car)
+			print("***** \(getCars.count) *****")
+		}
+		print("HEEEREEE")
+		
+		return getCars
+	}*/
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		getBitcoinData(url: baseURL)
 		currencyPicker.delegate = self
 		currencyPicker.dataSource = self
-		getBitcoinData(url: baseURL)
+		
+		
+		
+		
 		
 	}
-	
-	
-	
 	//TODO: Place your 3 UIPickerView delegate methods here
 	func numberOfComponents(in pickerView: UIPickerView) -> Int {//amount of columns
+		
 		return 1
 	}
 	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {//amount of rows
-		return lamboModels.count
+		return MainViewController.lamboModelsDB.count
 	}
 	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) ->
 		//title of car
 		String? {//titles
-		return lamboModels[row]
+			return MainViewController.lamboModelsDB[row].model
 	}
 	
 	
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-		
-		let index = Int(row)
 		//TO DO: Choose lamborghini model
-		print(lamboPrices[row])
-		
-		updateRatio(price: Double(lamboPrices[row]), index: index)
-		
+		if MainViewController.lamboModelsDB.count > row{
+			carIndexToDelete = row
+			updateRatio(price: Double(MainViewController.lamboModelsDB[row].price).rounded(), row: row)
+		}
 	}
 	
-	func updateRatio(price: Double, index: Int){
+	func updateRatio(price: Double, row: Int){
 		
 		let ratio = bitcoinPrice/price
 		
-		ratioLabel.text = "1 Bitcoin = \(String(ratio)) Lamborghini \(lamboModels[index])"
+		ratioLabel.text = "1 Bitcoin = \(String(ratio)) \(MainViewController.lamboModelsDB[row].model)(s)"
 	}
 	
 	
-
+	@IBAction func deleteIt(_ sender: Any) {
+		//array must always have at least one car
+		if MainViewController.lamboModelsDB.count > 1{
+			MainViewController.lamboModelsDB.remove(at: carIndexToDelete)
+			currencyPicker.reloadAllComponents()
+		} else {
+			print("Could not delete")
+		}
+	}
+	
 
 	//
 	//    //MARK: - Networking
@@ -76,13 +110,10 @@ class MainViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 		Alamofire.request(url, method: .get)
 			.responseJSON { response in
 				if response.result.isSuccess {
-					
-					print("Sucess! Got the bitcoin data")
 					let bitcoinJSON : JSON = JSON(response.result.value!)
 					self.updateBitcoinData(json: bitcoinJSON)
 					
 				} else {
-					print("Error: \(String(describing: response.result.error))")
 					self.bitcoinPriceLabel.text = "Connection Issues"
 				}
 		}
@@ -97,7 +128,6 @@ class MainViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 	//    /***************************************************************/
 	
 	func updateBitcoinData(json : JSON) {
-		print("HI")
 		if let bitcoinResult = json["ask"].double {
 			bitcoinPriceLabel.text = String("$\(bitcoinResult)")
 			self.bitcoinPrice = bitcoinResult
