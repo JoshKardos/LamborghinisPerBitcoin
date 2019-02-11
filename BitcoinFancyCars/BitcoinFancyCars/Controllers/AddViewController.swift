@@ -13,13 +13,12 @@ import Firebase
 
 class AddViewController: UIViewController {
 
-	@IBOutlet weak var priceLabelField: UITextField!
-	@IBOutlet weak var modelLabelField: UITextField!
-	
-	@IBAction func submit(_ sender: Any) {
+    @IBOutlet weak var modelLabelField: UITextField!
+    @IBOutlet weak var priceLabelField: UITextField!
+    @IBAction func submit(_ sender: Any) {
 		priceLabelField.isEnabled = false
 		modelLabelField.isEnabled = false
-	
+        
 		let newCar = Car(model: modelLabelField.text!, price: Double(priceLabelField.text!)!)
 	
 		MainViewController.lamboModelsDB.append(newCar)

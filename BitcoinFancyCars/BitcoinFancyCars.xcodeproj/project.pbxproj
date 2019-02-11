@@ -71,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				B3ADB49D21434AEB00F455AA /* BitcoinFancyCars */,
-				B3ADB4B221434B8B00F455AA /* Products */,
 				B3ADB4B5214353C700F455AA /* Icon-1024.png */,
 				7417CBE9994195915137F71C /* Pods */,
 				AC568C415B49D263BA29E648 /* Frameworks */,
@@ -90,13 +89,6 @@
 				B3ADB4CA2145F67600F455AA /* GoogleService-Info.plist */,
 			);
 			path = BitcoinFancyCars;
-			sourceTree = "<group>";
-		};
-		B3ADB4B221434B8B00F455AA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Products;
 			sourceTree = "<group>";
 		};
 		B3ADB4BF2145EE9500F455AA /* Views */ = {
