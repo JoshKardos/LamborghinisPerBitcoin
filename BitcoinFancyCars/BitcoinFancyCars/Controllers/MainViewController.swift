@@ -26,28 +26,6 @@ class MainViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 	@IBOutlet weak var bitcoinPriceLabel: UILabel!
 	@IBOutlet weak var currencyPicker: UIPickerView!
 	
-	
-	/*static func returnCars() -> [Car]{
-		var getCars = [Car]()
-		let carDB = Database.database().reference().child("Cars")
-		carDB.observe(.childAdded) { (snapshot) in
-			let snapshotValue = snapshot.value as! Dictionary<String, String>
-			
-			let model = snapshotValue["Model"]!
-			let price = snapshotValue["Price"]!
-			
-			print(model, price)
-			
-			let car = Car(model: model, price: Double(price)!)
-			print("Car Model: \(car.model) Price : \(car.price)")
-			getCars.append(car)
-			print("***** \(getCars.count) *****")
-		}
-		print("HEEEREEE")
-		
-		return getCars
-	}*/
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
