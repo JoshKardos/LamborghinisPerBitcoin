@@ -9,22 +9,33 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import Firebase
 
 class AddViewController: UIViewController {
 
     @IBOutlet weak var modelLabelField: UITextField!
     @IBOutlet weak var priceLabelField: UITextField!
+    
     @IBAction func submit(_ sender: Any) {
-		priceLabelField.isEnabled = false
-		modelLabelField.isEnabled = false
         
-		let newCar = Car(model: modelLabelField.text!, price: Double(priceLabelField.text!)!)
+        if modelLabelField.text!.trimmingCharacters(in: .whitespaces) != "" && priceLabelField.text!.trimmingCharacters(in: .whitespaces) != ""{
+            
+                priceLabelField.isEnabled = false
+                modelLabelField.isEnabled = false
+                
+            let newCar = Car(model: modelLabelField.text!, price: Double(priceLabelField.text!)!)
+                
+                MainViewController.lamboModelsDB.append(newCar)
+                self.priceLabelField.isEnabled = true
+                self.modelLabelField.isEnabled = true
+                self.performSegue(withIdentifier: "AfterAddingCarGoHome", sender: self)
+            
+        } else {
+            
+            //one of the fields is empty
+            print("One of the fields was empty")
+            
+        }
 	
-		MainViewController.lamboModelsDB.append(newCar)
-		self.priceLabelField.isEnabled = true
-		self.modelLabelField.isEnabled = true
-		self.performSegue(withIdentifier: "AfterAddingCarGoHome", sender: self)
 	
 		
 	}
