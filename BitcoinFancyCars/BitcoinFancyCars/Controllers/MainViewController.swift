@@ -13,8 +13,22 @@ import Firebase
 
 class MainViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 	
-	let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD"//url format for api
-	var bitcoinPrice = 0.0
+	static let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD"//url format for api
+    var bitcoinPrice = 0.0 {
+        didSet{
+            bitcoinPriceLabel.text = String("$\(bitcoinPrice)")
+        }
+    }
+    var timePriceLastSet = NSDate(){
+        didSet{
+            //date formatter
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/yyyy, hh:mm:ss"
+            var tempTime = dateFormatter.string(from: timePriceLastSet as Date)
+            timeLabel.text = "Last Refreshed at \(tempTime)"
+        }
+    }
+    
 	static var lamboModelsDB = [Car(model: "Gallardo", price: 400000), Car(model:"Van", price:900)]
 	//static var lamboModelsDB = returnCars()
 	
@@ -25,17 +39,21 @@ class MainViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 	@IBOutlet weak var ratioLabel: UILabel!
 	@IBOutlet weak var bitcoinPriceLabel: UILabel!
 	@IBOutlet weak var currencyPicker: UIPickerView!
-	
+    @IBOutlet weak var refreshButton: UIButton!
+    @IBOutlet weak var timeLabel:UILabel!
+    
+    
 	override func viewDidLoad() {
+        
+        
+        
 		super.viewDidLoad()
 		
-		getBitcoinData(url: baseURL)
+		getBitcoinData(url: MainViewController.baseURL)
 		currencyPicker.delegate = self
 		currencyPicker.dataSource = self
-		
-		
-		
-		
+		refreshButton.layer.cornerRadius = 7
+        
 		
 	}
 	//TODO: Place your 3 UIPickerView delegate methods here
@@ -99,7 +117,12 @@ class MainViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 	}
 	
 	
-	
+    @IBAction func refreshButtonPressed(_ sender: UIButton) {
+        
+        getBitcoinData(url: MainViewController.baseURL)
+        
+    }
+    
 	
 	
 	//    //MARK: - JSON Parsing
@@ -107,8 +130,8 @@ class MainViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 	
 	func updateBitcoinData(json : JSON) {
 		if let bitcoinResult = json["ask"].double {
-			bitcoinPriceLabel.text = String("$\(bitcoinResult)")
 			self.bitcoinPrice = bitcoinResult
+            timePriceLastSet = NSDate()
 		}
 		else{
 			bitcoinPriceLabel.text = "Price unavailable"
