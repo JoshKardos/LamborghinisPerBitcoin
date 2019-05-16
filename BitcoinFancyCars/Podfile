@@ -8,9 +8,6 @@ target 'BitcoinFancyCars' do
   # Pods for BitcoinFancyCars
 	pod 'Alamofire'
 	pod 'SwiftyJSON'
-	pod 'Firebase'
-	pod 'Firebase/Auth'
-	pod 'Firebase/Database'
-	pod 'Firebase/Core'
+	pod 'ProgressHUD'
 
 end

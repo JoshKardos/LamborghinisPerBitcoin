@@ -9,6 +9,8 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import CoreData
+import ProgressHUD
 
 class AddViewController: UIViewController {
     
@@ -18,11 +20,16 @@ class AddViewController: UIViewController {
     @IBOutlet weak var goBackButton: UIButton!
     @IBOutlet weak var submitButton: UIButton!
     
+    var delegate : MainViewController?
+    
     override func viewDidLoad() {
         goBackButton.layer.cornerRadius = 7
         submitButton.layer.cornerRadius = 7
     }
     
+    @IBAction func backPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func submit(_ sender: Any) {
         
@@ -31,15 +38,25 @@ class AddViewController: UIViewController {
             priceLabelField.isEnabled = false
             modelLabelField.isEnabled = false
             
-            let newCar = Car(model: modelLabelField.text!, price: Double(priceLabelField.text!)!)
+            let newCar = Car(context: MainViewController.context)
+            newCar.model = modelLabelField.text!
+            newCar.price = Double(priceLabelField.text!)!
             
-            MainViewController.lamboModelsDB.append(newCar)
+            MainViewController.myGarage.append(newCar)
             self.priceLabelField.isEnabled = true
             self.modelLabelField.isEnabled = true
             
-            //TODO: - Supercar Noise
+            AddViewController.save()
             
-            self.performSegue(withIdentifier: "AfterAddingCarGoHome", sender: self)
+            
+            self.dismiss(animated: true) {
+                
+                //TODO: - Beeping Noise
+                   self.delegate?.carsInPickerWheel = MainViewController.myGarage
+                MainViewController.playSound(soundName: "addHorn", soundNameExtension: "wav")
+                
+            }
+//            self.performSegue(withIdentifier: "AfterAddingCarGoHome", sender: self)
             
         } else {
             
@@ -49,6 +66,7 @@ class AddViewController: UIViewController {
             
             //TODO: - Alert
             //must fill both spots
+            ProgressHUD.showError("One of the fields is empty")
         }
         
         
@@ -64,8 +82,16 @@ class AddViewController: UIViewController {
             
         }
     }
-    
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    static func save(){
+        do{
+            try MainViewController.context.save()
+        } catch {
+            print("ERRROROROROR!")
+        }
+    }
     
 }
 

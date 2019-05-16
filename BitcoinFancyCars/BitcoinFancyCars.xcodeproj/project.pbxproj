@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		18E87AABC73FBFCD9B179CEC /* Pods_BitcoinFancyCars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E49D1FA686E5A480BB53E2A /* Pods_BitcoinFancyCars.framework */; };
+		B3115E49228B390900BC709A /* Data Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3115E47228B390900BC709A /* Data Model.xcdatamodeld */; };
+		B3115E4B228B445E00BC709A /* Lamborghini.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3115E4A228B445E00BC709A /* Lamborghini.swift */; };
+		B34074CD228BD57400FF6ED6 /* deleteHorn.wav in Resources */ = {isa = PBXBuildFile; fileRef = B34074CC228BD57400FF6ED6 /* deleteHorn.wav */; };
+		B34074CF228BD58B00FF6ED6 /* start.wav in Resources */ = {isa = PBXBuildFile; fileRef = B34074CE228BD58B00FF6ED6 /* start.wav */; };
+		B34074D1228BD5A000FF6ED6 /* addHorn.wav in Resources */ = {isa = PBXBuildFile; fileRef = B34074D0228BD5A000FF6ED6 /* addHorn.wav */; };
+		B34074D3228C76A800FF6ED6 /* waterDrop.wav in Resources */ = {isa = PBXBuildFile; fileRef = B34074D2228C76A800FF6ED6 /* waterDrop.wav */; };
 		B3ADB49F21434AEB00F455AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADB49E21434AEB00F455AA /* AppDelegate.swift */; };
 		B3ADB4A121434AEB00F455AA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADB4A021434AEB00F455AA /* MainViewController.swift */; };
 		B3ADB4A421434AEB00F455AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3ADB4A221434AEB00F455AA /* Main.storyboard */; };
 		B3ADB4A921434AEB00F455AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3ADB4A721434AEB00F455AA /* LaunchScreen.storyboard */; };
 		B3ADB4B6214353C800F455AA /* Icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = B3ADB4B5214353C700F455AA /* Icon-1024.png */; };
 		B3ADB4BB2144F2BE00F455AA /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADB4BA2144F2BE00F455AA /* AddViewController.swift */; };
-		B3ADB4C32145EED200F455AA /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADB4C22145EED200F455AA /* Car.swift */; };
-		B3ADB4CB2145F67700F455AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3ADB4CA2145F67600F455AA /* GoogleService-Info.plist */; };
 		B3ADB4CE214733CF00F455AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3ADB4A521434AEB00F455AA /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E49D1FA686E5A480BB53E2A /* Pods_BitcoinFancyCars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinFancyCars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3115E48228B390900BC709A /* Data Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Data Model.xcdatamodel"; sourceTree = "<group>"; };
+		B3115E4A228B445E00BC709A /* Lamborghini.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lamborghini.swift; path = ../../../../../../.Trash/Lamborghini.swift; sourceTree = "<group>"; };
 		B33B03E1AF8D6D361C19AF57 /* Pods-BitcoinFancyCars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinFancyCars.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinFancyCars/Pods-BitcoinFancyCars.debug.xcconfig"; sourceTree = "<group>"; };
+		B34074CC228BD57400FF6ED6 /* deleteHorn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = deleteHorn.wav; path = ../../../../../../Downloads/deleteHorn.wav; sourceTree = "<group>"; };
+		B34074CE228BD58B00FF6ED6 /* start.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = start.wav; path = ../../../../../../Downloads/start.wav; sourceTree = "<group>"; };
+		B34074D0228BD5A000FF6ED6 /* addHorn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = addHorn.wav; path = ../../../../../../Downloads/addHorn.wav; sourceTree = "<group>"; };
+		B34074D2228C76A800FF6ED6 /* waterDrop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = waterDrop.wav; path = ../../../../../../Downloads/waterDrop.wav; sourceTree = "<group>"; };
 		B3ADB49E21434AEB00F455AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3ADB4A021434AEB00F455AA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B3ADB4A321434AEB00F455AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -32,8 +42,6 @@
 		B3ADB4B9214354A100F455AA /* BitcoinFancyCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitcoinFancyCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3ADB4BA2144F2BE00F455AA /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		B3ADB4BE2145E9E500F455AA /* BitcoinFancyCars.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = BitcoinFancyCars.app; path = "../../../Library/Developer/Xcode/DerivedData/BitcoinFancyCars-ftbovwkqzkkykrgwwsikjjkjgsoo/Build/Products/Debug-iphonesimulator/BitcoinFancyCars.app"; sourceTree = "<group>"; };
-		B3ADB4C22145EED200F455AA /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
-		B3ADB4CA2145F67600F455AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C69FA552A61851D42C110C16 /* Pods-BitcoinFancyCars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinFancyCars.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinFancyCars/Pods-BitcoinFancyCars.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +75,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B34074CB228BD3B100FF6ED6 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				B34074CC228BD57400FF6ED6 /* deleteHorn.wav */,
+				B34074CE228BD58B00FF6ED6 /* start.wav */,
+				B34074D0228BD5A000FF6ED6 /* addHorn.wav */,
+				B34074D2228C76A800FF6ED6 /* waterDrop.wav */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		B3ADB49221434AEB00F455AA = {
 			isa = PBXGroup;
 			children = (
@@ -81,12 +100,13 @@
 		B3ADB49D21434AEB00F455AA /* BitcoinFancyCars */ = {
 			isa = PBXGroup;
 			children = (
+				B3ADB49E21434AEB00F455AA /* AppDelegate.swift */,
 				B3ADB4C12145EEBF00F455AA /* Models */,
 				B3ADB4C02145EEAA00F455AA /* Controllers */,
 				B3ADB4BF2145EE9500F455AA /* Views */,
+				B34074CB228BD3B100FF6ED6 /* New Group */,
 				B3ADB4A521434AEB00F455AA /* Assets.xcassets */,
 				B3ADB4AA21434AEB00F455AA /* Info.plist */,
-				B3ADB4CA2145F67600F455AA /* GoogleService-Info.plist */,
 			);
 			path = BitcoinFancyCars;
 			sourceTree = "<group>";
@@ -104,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				B3ADB4BA2144F2BE00F455AA /* AddViewController.swift */,
-				B3ADB49E21434AEB00F455AA /* AppDelegate.swift */,
 				B3ADB4A021434AEB00F455AA /* MainViewController.swift */,
 			);
 			path = Controllers;
@@ -113,7 +132,8 @@
 		B3ADB4C12145EEBF00F455AA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B3ADB4C22145EED200F455AA /* Car.swift */,
+				B3115E4A228B445E00BC709A /* Lamborghini.swift */,
+				B3115E47228B390900BC709A /* Data Model.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,7 +167,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = JoshTaylorKardos;
 				TargetAttributes = {
 					B3ADB49A21434AEB00F455AA = {
@@ -179,10 +199,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B34074D3228C76A800FF6ED6 /* waterDrop.wav in Resources */,
+				B34074CD228BD57400FF6ED6 /* deleteHorn.wav in Resources */,
 				B3ADB4A921434AEB00F455AA /* LaunchScreen.storyboard in Resources */,
+				B34074D1228BD5A000FF6ED6 /* addHorn.wav in Resources */,
 				B3ADB4B6214353C800F455AA /* Icon-1024.png in Resources */,
-				B3ADB4CB2145F67700F455AA /* GoogleService-Info.plist in Resources */,
 				B3ADB4A421434AEB00F455AA /* Main.storyboard in Resources */,
+				B34074CF228BD58B00FF6ED6 /* start.wav in Resources */,
 				B3ADB4CE214733CF00F455AA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,26 +219,20 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinFancyCars/Pods-BitcoinFancyCars-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BitcoinFancyCars/Pods-BitcoinFancyCars-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinFancyCars/Pods-BitcoinFancyCars-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BitcoinFancyCars/Pods-BitcoinFancyCars-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B820AF799EA550294F261638 /* [CP] Check Pods Manifest.lock */ = {
@@ -243,9 +260,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3115E49228B390900BC709A /* Data Model.xcdatamodeld in Sources */,
 				B3ADB4A121434AEB00F455AA /* MainViewController.swift in Sources */,
+				B3115E4B228B445E00BC709A /* Lamborghini.swift in Sources */,
 				B3ADB49F21434AEB00F455AA /* AppDelegate.swift in Sources */,
-				B3ADB4C32145EED200F455AA /* Car.swift in Sources */,
 				B3ADB4BB2144F2BE00F455AA /* AddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +304,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -293,6 +312,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -343,6 +363,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -350,6 +371,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -437,6 +459,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B3115E47228B390900BC709A /* Data Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B3115E48228B390900BC709A /* Data Model.xcdatamodel */,
+			);
+			currentVersion = B3115E48228B390900BC709A /* Data Model.xcdatamodel */;
+			path = "Data Model.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B3ADB49321434AEB00F455AA /* Project object */;
 }
